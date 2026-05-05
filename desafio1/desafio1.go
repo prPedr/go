@@ -3,8 +3,36 @@ package main
 import "fmt"
 
 func main() {
-	calcularIdade()
-	converterHorasParaMinutos()
+	for {
+		fmt.Println("|--------------------------------|")
+		fmt.Println("|        Escolha uma opcao       |")
+		fmt.Println("|--------------------------------|")
+		fmt.Println("| 1 - Calcular idade             |")
+		fmt.Println("| 2 - Converter horas em minutos |")
+		fmt.Println("| 3 - Sair                       |")
+		fmt.Println("|--------------------------------|")
+		fmt.Println()
+
+		var opcao string
+		fmt.Print("Escolha uma opcao: ")
+		fmt.Scan(&opcao)
+
+		switch opcao {
+		case "1":
+			calcularIdade()
+
+		case "2":
+			converterHorasParaMinutos()
+
+		case "3":
+			fmt.Println("Finalizando o programa")
+			return
+
+		default:
+			fmt.Println("Opcao invalida.")
+		}
+	}
+
 }
 
 func calcularIdade() {
