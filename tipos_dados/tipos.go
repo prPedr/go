@@ -12,8 +12,12 @@ func main() {
 	var nome = "Pedro"
 	var isAdmin = true
 	idade := 21
+	pi := 3.14
+	var testeByte byte = 'c'
 
-	fmt.Println(nome)
-	fmt.Println(isAdmin)
-	fmt.Println(idade)
+	fmt.Printf("String: %s \n", nome)
+	fmt.Printf("Bool: %t \n", isAdmin)
+	fmt.Printf("Idade: %d \n", idade)
+	fmt.Printf("Float: %.2f \n", pi)
+	fmt.Println("Byte:", testeByte)
 }
