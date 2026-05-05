@@ -16,12 +16,22 @@ func main() {
 	fmt.Printf("Valor 2 = %s \n", valor1Convertido2)
 
 	// Converter: String -> Int
-	var valor2 = "80"
+	valor2 := "80"
 	valorInteiro, err := strconv.Atoi(valor2)
 
 	if err != nil {
 		fmt.Println("Erro ao realizar conversao")
 	} else {
 		fmt.Println(valorInteiro)
+	}
+
+	// Converter: String -> Float
+	pi := "3.14"
+	piConvertido, err2 := strconv.ParseFloat(pi, 64)
+
+	if err2 != nil {
+		fmt.Println("Erro ao realizar conversao")
+	} else {
+		fmt.Println(piConvertido)
 	}
 }
