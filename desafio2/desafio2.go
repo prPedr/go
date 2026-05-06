@@ -10,16 +10,11 @@ func main() {
 	fmt.Print("Digite o valor capital: ")
 	fmt.Scan(&p)
 
-	fmt.Print("")
-
 	fmt.Print("Digite a taxa de juros: ")
 	fmt.Scan(&i)
 
 	calcularPorcentagem := i / 100
-
 	i = calcularPorcentagem
-
-	fmt.Print("")
 
 	fmt.Print("Digite o numero de meses: ")
 	fmt.Scan(&n)
