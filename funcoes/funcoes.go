@@ -26,7 +26,7 @@ type Usuario struct {
 	Senha string
 }
 
-func loginSistema() (bool, error) {
+func loginSistema() error {
 	usuario1 := Usuario{Nome: "Pedro.Cardoso", Senha: "Pedro@123"}
 
 	var nomeInput string
@@ -39,25 +39,21 @@ func loginSistema() (bool, error) {
 	fmt.Scan(&senhaInput)
 
 	if usuario1.Nome != nomeInput {
-		return false, errors.New("Usuario invalido")
+		return errors.New("Usuario invalido")
 	}
 
 	if usuario1.Senha != senhaInput {
-		return false, errors.New("Senha invalida")
+		return errors.New("Senha invalida")
 	}
 
-	return true, nil
+	return nil
 }
 
 func main() {
-	logado, err := loginSistema()
-
-	if err != nil {
+	if err := loginSistema(); err != nil {
 		fmt.Println(err)
 		return
 	}
 
-	if logado {
-		fmt.Println("Usuario logado")
-	}
+	fmt.Println("Login realizado")
 }
