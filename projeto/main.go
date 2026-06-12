@@ -2,16 +2,12 @@ package main
 
 import (
 	"fmt"
-	"projeto/utils"
+	"projeto/aluno"
 )
 
-func statusSistema() string {
-	return "Sistema online"
-}
-
 func main() {
-	status := statusSistema()
+	aluno1 := aluno.ObterInformacoesAluno()
 
-	fmt.Println("Status da plataforma: ", status)
-	utils.Mensagem("Pedro")
+	fmt.Println(aluno1.RetornoInformacoesAluno())
+	fmt.Println(aluno1.Status())
 }
